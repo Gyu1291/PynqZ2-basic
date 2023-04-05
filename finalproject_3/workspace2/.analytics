@@ -1,0 +1,22 @@
+timestamp=[2022-06-18 23:09:58], mode=WORKBENCH_START, duration=0:00:02.916, duration_ms=2916, data={}
+timestamp=[2022-06-18 23:09:58], mode=WORKBENCH_UI_INIT, duration=0:00:00.225, duration_ms=225, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2022-06-18 23:10:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.595, duration_ms=1595, data={}
+timestamp=[2022-06-18 23:10:32], mode=APP_CREATION, duration=0:00:12.241, duration_ms=12241, data={name=finalproject, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=design_2_wrapper, application_type=application}
+timestamp=[2022-06-18 23:12:26], mode=PLATFORM_GENERATION, duration=0:00:26.407, duration_ms=26407, data={name=design_2_wrapper}
+timestamp=[2022-06-18 23:12:27], mode=BUILD, duration=0:00:00.669, duration_ms=669, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:15:37], mode=BUILD, duration=0:00:00.295, duration_ms=295, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:16:16], mode=BUILD, duration=0:00:00.484, duration_ms=484, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:18:01], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:19:32], mode=BUILD, duration=0:00:00.549, duration_ms=549, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:19:45], mode=BUILD, duration=0:00:00.481, duration_ms=481, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:19:52], mode=BUILD, duration=0:00:00.476, duration_ms=476, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:21:13], mode=BUILD, duration=0:00:00.537, duration_ms=537, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:25:59], mode=BUILD, duration=0:00:00.484, duration_ms=484, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:31:48], mode=BUILD, duration=0:00:00.287, duration_ms=287, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:32:01], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:36:07], mode=BUILD, duration=0:00:00.535, duration_ms=535, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:38:26], mode=BUILD, duration=0:00:00.289, duration_ms=289, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:38:40], mode=BUILD, duration=0:00:00.545, duration_ms=545, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:48:18], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-18 23:49:20], mode=BUILD, duration=0:00:00.547, duration_ms=547, data={name=finalproject, configuration=Debug, clean_build=false}
+timestamp=[2022-06-19 00:09:39], mode=BUILD, duration=0:00:00.554, duration_ms=554, data={name=finalproject, configuration=Debug, clean_build=false}

@@ -1,0 +1,10 @@
+20:12:56 **** Build of configuration Debug for project week11delay_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 58321 D:/Xilinx/week11/workspace/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm domain_ps7_cortexa9_0 D:/Xilinx/week11/workspace/week11delay_system/Debug/system.bif
+sdcard_gen --xpfm D:/Xilinx/week11/workspace/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif D:/Xilinx/week11/workspace/week11delay_system/Debug/system.bif --bitstream D:/Xilinx/week11/workspace/week11delay/_ide/bitstream/design_1_wrapper.bit --elf D:/Xilinx/week11/workspace/week11delay/Debug/week11delay.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/Xilinx/week11/workspace/week11delay/_ide/bitstream/design_1_wrapper.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/Xilinx/week11/workspace/week11delay_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+20:13:00 Build Finished (took 4s.603ms)
+

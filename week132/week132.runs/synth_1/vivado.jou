@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jun 10 16:07:47 2022
+# Process ID: 17196
+# Current directory: D:/Xilinx/week132/week132.runs/synth_1
+# Command line: vivado.exe -log HDMI_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_TOP.tcl
+# Log file: D:/Xilinx/week132/week132.runs/synth_1/HDMI_TOP.vds
+# Journal file: D:/Xilinx/week132/week132.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source HDMI_TOP.tcl -notrace

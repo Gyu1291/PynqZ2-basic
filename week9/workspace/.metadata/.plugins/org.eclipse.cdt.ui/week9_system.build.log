@@ -1,0 +1,10 @@
+23:23:32 **** Incremental Build of configuration Debug for project week9_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 61956 D:/Xilinx/week9/workspace/audio_1/export/audio_1/audio_1.xpfm domain_ps7_cortexa9_0 D:/Xilinx/week9/workspace/week9_system/Debug/system.bif
+sdcard_gen --xpfm D:/Xilinx/week9/workspace/audio_1/export/audio_1/audio_1.xpfm --sys_config audio_1 --bif D:/Xilinx/week9/workspace/week9_system/Debug/system.bif --bitstream D:/Xilinx/week9/workspace/week9/_ide/bitstream/audio_1.bit --elf D:/Xilinx/week9/workspace/week9/Debug/week9.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/Xilinx/week9/workspace/week9/_ide/bitstream/audio_1.bit
+Running D:/Xilinx/Vitis/2020.1/bin/bootgen  -image D:/Xilinx/week9/workspace/week9_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+23:23:36 Build Finished (took 3s.679ms)
+

@@ -1,0 +1,740 @@
+20:05:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive F:\Xilinx\week7_3\workspace\temp_xsdb_launch_script.tcl
+20:05:19 INFO  : Registering command handlers for Vitis TCF services
+20:05:24 INFO  : XSCT server has started successfully.
+20:05:29 INFO  : Platform repository initialization has completed.
+20:05:38 INFO  : plnx-install-location is set to ''
+20:05:38 INFO  : Successfully done setting XSCT server connection channel  
+20:05:38 INFO  : Successfully done query RDI_DATADIR 
+20:05:38 INFO  : Successfully done setting workspace for the tool. 
+20:06:28 INFO  : Result from executing command 'getProjects': top
+20:06:28 INFO  : Result from executing command 'getPlatforms': 
+20:06:28 INFO  : Platform 'top' is added to custom repositories.
+20:06:42 INFO  : Platform 'top' is added to custom repositories.
+20:19:07 INFO  : Result from executing command 'getProjects': top
+20:19:07 INFO  : Result from executing command 'getPlatforms': top|F:/Xilinx/week7_3/workspace/top/export/top/top.xpfm
+20:19:08 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+20:19:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:20:00 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:20:00 INFO  : 'jtag frequency' command is executed.
+20:20:00 INFO  : Context for 'APU' is selected.
+20:20:00 INFO  : System reset is completed.
+20:20:03 INFO  : 'after 3000' command is executed.
+20:20:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:20:05 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+20:20:05 INFO  : Context for 'APU' is selected.
+20:20:05 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+20:20:05 INFO  : 'configparams force-mem-access 1' command is executed.
+20:20:05 INFO  : Context for 'APU' is selected.
+20:20:05 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+20:20:06 INFO  : 'ps7_init' command is executed.
+20:20:06 INFO  : 'ps7_post_config' command is executed.
+20:20:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:20:06 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:20:06 INFO  : 'configparams force-mem-access 0' command is executed.
+20:20:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:20:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:20:07 INFO  : 'con' command is executed.
+20:20:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:20:07 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+20:21:35 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+20:22:18 INFO  : Disconnected from the channel tcfchan#3.
+20:22:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:19 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:22:19 INFO  : 'jtag frequency' command is executed.
+20:22:19 INFO  : Context for 'APU' is selected.
+20:22:19 INFO  : System reset is completed.
+20:22:22 INFO  : 'after 3000' command is executed.
+20:22:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:22:25 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+20:22:25 INFO  : Context for 'APU' is selected.
+20:22:25 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+20:22:25 INFO  : 'configparams force-mem-access 1' command is executed.
+20:22:25 INFO  : Context for 'APU' is selected.
+20:22:25 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+20:22:26 INFO  : 'ps7_init' command is executed.
+20:22:26 INFO  : 'ps7_post_config' command is executed.
+20:22:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:26 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:22:26 INFO  : 'configparams force-mem-access 0' command is executed.
+20:22:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:22:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:26 INFO  : 'con' command is executed.
+20:22:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:22:26 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+20:25:03 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+20:25:28 INFO  : Disconnected from the channel tcfchan#5.
+20:25:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:29 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:25:29 INFO  : 'jtag frequency' command is executed.
+20:25:29 INFO  : Context for 'APU' is selected.
+20:25:29 INFO  : System reset is completed.
+20:25:32 INFO  : 'after 3000' command is executed.
+20:25:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:25:35 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+20:25:35 INFO  : Context for 'APU' is selected.
+20:25:35 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+20:25:35 INFO  : 'configparams force-mem-access 1' command is executed.
+20:25:35 INFO  : Context for 'APU' is selected.
+20:25:35 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+20:25:35 INFO  : 'ps7_init' command is executed.
+20:25:35 INFO  : 'ps7_post_config' command is executed.
+20:25:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:25:36 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:25:36 INFO  : 'configparams force-mem-access 0' command is executed.
+20:25:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:25:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:25:36 INFO  : 'con' command is executed.
+20:25:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:25:36 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+20:28:48 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+20:29:07 INFO  : Disconnected from the channel tcfchan#7.
+20:29:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:29:08 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:29:08 INFO  : 'jtag frequency' command is executed.
+20:29:08 INFO  : Context for 'APU' is selected.
+20:29:08 INFO  : System reset is completed.
+20:29:11 INFO  : 'after 3000' command is executed.
+20:29:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:29:13 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+20:29:13 INFO  : Context for 'APU' is selected.
+20:29:13 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+20:29:13 INFO  : 'configparams force-mem-access 1' command is executed.
+20:29:13 INFO  : Context for 'APU' is selected.
+20:29:13 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+20:29:14 INFO  : 'ps7_init' command is executed.
+20:29:14 INFO  : 'ps7_post_config' command is executed.
+20:29:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:14 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:29:14 INFO  : 'configparams force-mem-access 0' command is executed.
+20:29:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:29:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:14 INFO  : 'con' command is executed.
+20:29:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:29:14 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+20:31:46 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+20:32:04 INFO  : Disconnected from the channel tcfchan#9.
+20:32:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:05 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:32:05 INFO  : 'jtag frequency' command is executed.
+20:32:05 INFO  : Context for 'APU' is selected.
+20:32:05 INFO  : System reset is completed.
+20:32:08 INFO  : 'after 3000' command is executed.
+20:32:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:32:11 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+20:32:11 INFO  : Context for 'APU' is selected.
+20:32:11 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+20:32:11 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:11 INFO  : Context for 'APU' is selected.
+20:32:11 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+20:32:11 INFO  : 'ps7_init' command is executed.
+20:32:11 INFO  : 'ps7_post_config' command is executed.
+20:32:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:12 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:12 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:12 INFO  : 'con' command is executed.
+20:32:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:32:12 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+20:32:35 INFO  : Disconnected from the channel tcfchan#11.
+12:39:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive F:\Xilinx\week7_3\workspace\temp_xsdb_launch_script.tcl
+12:40:11 INFO  : XSCT server has started successfully.
+12:40:12 INFO  : plnx-install-location is set to ''
+12:40:12 INFO  : Successfully done setting XSCT server connection channel  
+12:40:12 INFO  : Successfully done setting workspace for the tool. 
+12:40:30 INFO  : Platform repository initialization has completed.
+12:40:31 INFO  : Registering command handlers for Vitis TCF services
+12:40:47 INFO  : Successfully done query RDI_DATADIR 
+14:47:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive F:\Xilinx\week7_3\workspace\temp_xsdb_launch_script.tcl
+14:47:44 INFO  : XSCT server has started successfully.
+14:47:44 INFO  : plnx-install-location is set to ''
+14:47:44 INFO  : Successfully done setting XSCT server connection channel  
+14:47:44 INFO  : Successfully done setting workspace for the tool. 
+14:47:47 INFO  : Platform repository initialization has completed.
+14:47:47 INFO  : Successfully done query RDI_DATADIR 
+14:47:48 INFO  : Registering command handlers for Vitis TCF services
+14:50:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:50:01 INFO  : 'jtag frequency' command is executed.
+14:50:01 INFO  : Context for 'APU' is selected.
+14:50:01 INFO  : System reset is completed.
+14:50:04 INFO  : 'after 3000' command is executed.
+14:50:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+14:50:07 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+14:50:07 INFO  : Context for 'APU' is selected.
+14:50:07 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+14:50:07 INFO  : 'configparams force-mem-access 1' command is executed.
+14:50:07 INFO  : Context for 'APU' is selected.
+14:50:07 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+14:50:07 INFO  : 'ps7_init' command is executed.
+14:50:07 INFO  : 'ps7_post_config' command is executed.
+14:50:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:50:08 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:50:08 INFO  : 'configparams force-mem-access 0' command is executed.
+14:50:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:50:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:50:08 INFO  : 'con' command is executed.
+14:50:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:50:08 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+14:54:14 INFO  : Disconnected from the channel tcfchan#1.
+14:54:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:15 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:54:15 INFO  : 'jtag frequency' command is executed.
+14:54:15 INFO  : Context for 'APU' is selected.
+14:54:16 INFO  : System reset is completed.
+14:54:19 INFO  : 'after 3000' command is executed.
+14:54:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+14:54:21 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+14:54:21 INFO  : Context for 'APU' is selected.
+14:54:24 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+14:54:24 INFO  : 'configparams force-mem-access 1' command is executed.
+14:54:24 INFO  : Context for 'APU' is selected.
+14:54:24 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+14:54:24 INFO  : 'ps7_init' command is executed.
+14:54:24 INFO  : 'ps7_post_config' command is executed.
+14:54:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:54:25 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:54:25 INFO  : 'configparams force-mem-access 0' command is executed.
+14:54:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:54:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:54:25 INFO  : 'con' command is executed.
+14:54:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:54:25 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+14:58:10 INFO  : Disconnected from the channel tcfchan#2.
+14:58:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:11 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:58:11 INFO  : 'jtag frequency' command is executed.
+14:58:11 INFO  : Context for 'APU' is selected.
+14:58:11 INFO  : System reset is completed.
+14:58:14 INFO  : 'after 3000' command is executed.
+14:58:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+14:58:17 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+14:58:17 INFO  : Context for 'APU' is selected.
+14:58:19 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+14:58:19 INFO  : 'configparams force-mem-access 1' command is executed.
+14:58:19 INFO  : Context for 'APU' is selected.
+14:58:19 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+14:58:20 INFO  : 'ps7_init' command is executed.
+14:58:20 INFO  : 'ps7_post_config' command is executed.
+14:58:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:58:20 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:58:20 INFO  : 'configparams force-mem-access 0' command is executed.
+14:58:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:58:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:58:20 INFO  : 'con' command is executed.
+14:58:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:58:20 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+14:59:23 INFO  : Disconnected from the channel tcfchan#3.
+14:59:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:25 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:59:25 INFO  : 'jtag frequency' command is executed.
+14:59:25 INFO  : Context for 'APU' is selected.
+14:59:25 INFO  : System reset is completed.
+14:59:28 INFO  : 'after 3000' command is executed.
+14:59:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+14:59:30 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+14:59:30 INFO  : Context for 'APU' is selected.
+14:59:32 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+14:59:32 INFO  : 'configparams force-mem-access 1' command is executed.
+14:59:32 INFO  : Context for 'APU' is selected.
+14:59:32 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+14:59:33 INFO  : 'ps7_init' command is executed.
+14:59:33 INFO  : 'ps7_post_config' command is executed.
+14:59:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:59:33 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:59:33 INFO  : 'configparams force-mem-access 0' command is executed.
+14:59:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:59:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:59:33 INFO  : 'con' command is executed.
+14:59:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:59:33 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+15:06:26 INFO  : Result from executing command 'getProjects': top
+15:06:26 INFO  : Result from executing command 'getPlatforms': top|F:/Xilinx/week7_3/workspace/top/export/top/top.xpfm
+15:06:27 INFO  : Checking for BSP changes to sync application flags for project 'week7_3'...
+15:06:46 INFO  : Disconnected from the channel tcfchan#4.
+15:06:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:47 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:06:47 INFO  : 'jtag frequency' command is executed.
+15:06:47 INFO  : Context for 'APU' is selected.
+15:06:48 INFO  : System reset is completed.
+15:06:51 INFO  : 'after 3000' command is executed.
+15:06:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:06:53 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:06:53 INFO  : Context for 'APU' is selected.
+15:06:55 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:06:55 INFO  : 'configparams force-mem-access 1' command is executed.
+15:06:55 INFO  : Context for 'APU' is selected.
+15:06:55 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:06:56 INFO  : 'ps7_init' command is executed.
+15:06:56 INFO  : 'ps7_post_config' command is executed.
+15:06:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:06:56 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:06:56 INFO  : 'configparams force-mem-access 0' command is executed.
+15:06:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:06:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:06:56 INFO  : 'con' command is executed.
+15:06:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:06:56 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+15:08:42 INFO  : Disconnected from the channel tcfchan#6.
+15:08:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:08:44 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:08:44 INFO  : 'jtag frequency' command is executed.
+15:08:44 INFO  : Context for 'APU' is selected.
+15:08:44 INFO  : System reset is completed.
+15:08:47 INFO  : 'after 3000' command is executed.
+15:08:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:08:49 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:08:49 INFO  : Context for 'APU' is selected.
+15:08:49 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:08:49 INFO  : 'configparams force-mem-access 1' command is executed.
+15:08:50 INFO  : Context for 'APU' is selected.
+15:08:50 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:08:50 INFO  : 'ps7_init' command is executed.
+15:08:50 INFO  : 'ps7_post_config' command is executed.
+15:08:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:50 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:08:50 INFO  : 'configparams force-mem-access 0' command is executed.
+15:08:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:08:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:50 INFO  : 'con' command is executed.
+15:08:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:08:50 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default.tcl'
+15:11:11 INFO  : Disconnected from the channel tcfchan#7.
+15:11:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:12 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:11:12 INFO  : 'jtag frequency' command is executed.
+15:11:12 INFO  : Context for 'APU' is selected.
+15:11:12 INFO  : System reset is completed.
+15:11:15 INFO  : 'after 3000' command is executed.
+15:11:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:11:18 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:11:18 INFO  : Context for 'APU' is selected.
+15:11:18 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:11:18 INFO  : 'configparams force-mem-access 1' command is executed.
+15:11:18 INFO  : Context for 'APU' is selected.
+15:11:18 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:11:18 INFO  : 'ps7_init' command is executed.
+15:11:18 INFO  : 'ps7_post_config' command is executed.
+15:11:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:18 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:18 INFO  : 'configparams force-mem-access 0' command is executed.
+15:11:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:11:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:19 INFO  : 'con' command is executed.
+15:11:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:11:19 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default_2.tcl'
+15:13:29 INFO  : Disconnected from the channel tcfchan#8.
+15:13:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:13:30 INFO  : 'jtag frequency' command is executed.
+15:13:30 INFO  : Context for 'APU' is selected.
+15:13:32 INFO  : System reset is completed.
+15:13:35 INFO  : 'after 3000' command is executed.
+15:13:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:13:37 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:13:37 INFO  : Context for 'APU' is selected.
+15:13:37 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:13:37 INFO  : 'configparams force-mem-access 1' command is executed.
+15:13:38 INFO  : Context for 'APU' is selected.
+15:13:38 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:13:38 INFO  : 'ps7_init' command is executed.
+15:13:38 INFO  : 'ps7_post_config' command is executed.
+15:13:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:38 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:38 INFO  : 'configparams force-mem-access 0' command is executed.
+15:13:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:13:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:38 INFO  : 'con' command is executed.
+15:13:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:13:38 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default_2.tcl'
+15:16:18 INFO  : Disconnected from the channel tcfchan#9.
+15:16:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:19 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:16:19 INFO  : 'jtag frequency' command is executed.
+15:16:19 INFO  : Context for 'APU' is selected.
+15:16:21 INFO  : System reset is completed.
+15:16:24 INFO  : 'after 3000' command is executed.
+15:16:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:16:26 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:16:26 INFO  : Context for 'APU' is selected.
+15:16:26 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:16:26 INFO  : 'configparams force-mem-access 1' command is executed.
+15:16:26 INFO  : Context for 'APU' is selected.
+15:16:26 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:16:27 INFO  : 'ps7_init' command is executed.
+15:16:27 INFO  : 'ps7_post_config' command is executed.
+15:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:27 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:16:27 INFO  : 'configparams force-mem-access 0' command is executed.
+15:16:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:27 INFO  : 'con' command is executed.
+15:16:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:16:27 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default_2.tcl'
+15:17:16 INFO  : Disconnected from the channel tcfchan#10.
+15:17:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:17 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:17:17 INFO  : 'jtag frequency' command is executed.
+15:17:17 INFO  : Context for 'APU' is selected.
+15:17:17 INFO  : System reset is completed.
+15:17:20 INFO  : 'after 3000' command is executed.
+15:17:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:17:22 INFO  : FPGA configured successfully with bitstream "F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit"
+15:17:22 INFO  : Context for 'APU' is selected.
+15:17:22 INFO  : Hardware design and registers information is loaded from 'F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa'.
+15:17:22 INFO  : 'configparams force-mem-access 1' command is executed.
+15:17:22 INFO  : Context for 'APU' is selected.
+15:17:22 INFO  : Sourcing of 'F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl' is done.
+15:17:23 INFO  : 'ps7_init' command is executed.
+15:17:23 INFO  : 'ps7_post_config' command is executed.
+15:17:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:23 INFO  : The application 'F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:17:23 INFO  : 'configparams force-mem-access 0' command is executed.
+15:17:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file F:/Xilinx/week7_3/workspace/week7_3/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw F:/Xilinx/week7_3/workspace/top/export/top/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source F:/Xilinx/week7_3/workspace/week7_3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow F:/Xilinx/week7_3/workspace/week7_3/Debug/week7_3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:17:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:23 INFO  : 'con' command is executed.
+15:17:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:17:23 INFO  : Launch script is exported to file 'F:\Xilinx\week7_3\workspace\.sdk\launch_scripts\single_application_debug\debugger_week7_3-default_2.tcl'
+15:19:17 INFO  : Disconnected from the channel tcfchan#11.
+17:49:40 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Xilinx\week7_3\workspace\temp_xsdb_launch_script.tcl
+17:49:40 INFO  : Registering command handlers for Vitis TCF services
+17:49:41 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+17:49:41 INFO  : Platform repository initialization has completed.
+17:49:42 INFO  : XSCT server has started successfully.
+17:49:42 INFO  : plnx-install-location is set to ''
+17:49:42 INFO  : Successfully done setting XSCT server connection channel  
+17:49:42 INFO  : Successfully done query RDI_DATADIR 
+17:49:42 INFO  : Successfully done setting workspace for the tool. 

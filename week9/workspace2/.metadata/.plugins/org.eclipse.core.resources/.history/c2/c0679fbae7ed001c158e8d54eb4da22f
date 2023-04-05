@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="week11" location="D:/Xilinx/week9/workspace2/week11" platform="D:/Xilinx/week9/workspace2/audio_1/export/audio_1/audio_1.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="week11_system" sysConfig="audio_1" runtime="cpp" cpu="domain_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="b4b1a4539ba15e9e50d5936d41cb4d5e">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.987072190" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.236842258" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

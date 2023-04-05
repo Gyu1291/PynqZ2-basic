@@ -1,0 +1,10 @@
+19:49:28 **** Build of configuration Debug for project week7_2_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56354 F:/Xilinx/week7_2/workspace/top/export/top/top.xpfm domain_ps7_cortexa9_0 F:/Xilinx/week7_2/workspace/week7_2_system/Debug/system.bif
+sdcard_gen --xpfm F:/Xilinx/week7_2/workspace/top/export/top/top.xpfm --sys_config top --bif F:/Xilinx/week7_2/workspace/week7_2_system/Debug/system.bif --bitstream F:/Xilinx/week7_2/workspace/week7_2/_ide/bitstream/top.bit --elf F:/Xilinx/week7_2/workspace/week7_2/Debug/week7_2.elf,ps7_cortexa9_0
+creating BOOT.BIN using F:/Xilinx/week7_2/workspace/week7_2/_ide/bitstream/top.bit
+Running F:/Xilinx/Vitis/2020.1/bin/bootgen  -image F:/Xilinx/week7_2/workspace/week7_2_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+19:49:37 Build Finished (took 9s.103ms)
+

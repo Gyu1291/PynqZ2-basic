@@ -1,0 +1,9 @@
+TRACE::2022-04-27.19:49:30::SCWBifWriter::Found the complete platform F:/Xilinx/week7_2/workspace/top/export/top/top.xpfm
+TRACE::2022-04-27.19:49:30::SCWBifWriter::hardware databse : top_1
+TRACE::2022-04-27.19:49:30::SCWBifWriter::bitstream found in the design
+TRACE::2022-04-27.19:49:30::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2022-04-27.19:49:30::SCWBifWriter::proc type : 
+TRACE::2022-04-27.19:49:30::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2022-04-27.19:49:30::SCWBifWriter::Device type is : zynq
+TRACE::2022-04-27.19:49:30::SCWBifWriter::Writing BIF to file : F:/Xilinx/week7_2/workspace/week7_2_system/Debug/system.bif
+TRACE::2022-04-27.19:49:30::SCWBifWriter::Writing the Zynq Baremetal bif 

@@ -1,0 +1,113 @@
+13:34:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Xilinx\finalproject_2\workspace2\temp_xsdb_launch_script.tcl
+13:34:45 INFO  : Registering command handlers for Vitis TCF services
+13:34:47 INFO  : Platform repository initialization has completed.
+13:34:47 INFO  : XSCT server has started successfully.
+13:34:47 INFO  : Successfully done setting XSCT server connection channel  
+13:34:47 INFO  : plnx-install-location is set to ''
+13:34:47 INFO  : Successfully done query RDI_DATADIR 
+13:34:47 INFO  : Successfully done setting workspace for the tool. 
+13:35:13 INFO  : Result from executing command 'getProjects': design_1_wrapper
+13:35:13 INFO  : Result from executing command 'getPlatforms': 
+13:35:13 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:35:18 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:36:19 INFO  : Result from executing command 'getProjects': design_1_wrapper
+13:36:19 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/Xilinx/finalproject_2/workspace2/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+13:36:19 INFO  : Checking for BSP changes to sync application flags for project 'finalproject'...
+13:36:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:36:45 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:36:45 INFO  : 'jtag frequency' command is executed.
+13:36:45 INFO  : Context for 'APU' is selected.
+13:36:45 INFO  : System reset is completed.
+13:36:48 INFO  : 'after 3000' command is executed.
+13:36:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+13:36:50 INFO  : FPGA configured successfully with bitstream "D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/bitstream/design_1_wrapper.bit"
+13:36:50 INFO  : Context for 'APU' is selected.
+13:36:50 INFO  : Hardware design and registers information is loaded from 'D:/Xilinx/finalproject_2/workspace2/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:36:50 INFO  : 'configparams force-mem-access 1' command is executed.
+13:36:50 INFO  : Context for 'APU' is selected.
+13:36:50 INFO  : Sourcing of 'D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/psinit/ps7_init.tcl' is done.
+13:36:50 INFO  : 'ps7_init' command is executed.
+13:36:50 INFO  : 'ps7_post_config' command is executed.
+13:36:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:36:51 INFO  : The application 'D:/Xilinx/finalproject_2/workspace2/finalproject/Debug/finalproject.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:36:51 INFO  : 'configparams force-mem-access 0' command is executed.
+13:36:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Xilinx/finalproject_2/workspace2/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Xilinx/finalproject_2/workspace2/finalproject/Debug/finalproject.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:36:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:36:51 INFO  : 'con' command is executed.
+13:36:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:36:51 INFO  : Disconnected from the channel tcfchan#2.
+15:50:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Xilinx\finalproject_2\workspace2\temp_xsdb_launch_script.tcl
+15:50:04 INFO  : XSCT server has started successfully.
+15:50:04 INFO  : plnx-install-location is set to ''
+15:50:04 INFO  : Successfully done setting XSCT server connection channel  
+15:50:04 INFO  : Successfully done setting workspace for the tool. 
+15:50:06 INFO  : Platform repository initialization has completed.
+15:50:06 INFO  : Registering command handlers for Vitis TCF services
+15:50:06 INFO  : Successfully done query RDI_DATADIR 
+15:50:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:43 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:50:43 INFO  : 'jtag frequency' command is executed.
+15:50:43 INFO  : Context for 'APU' is selected.
+15:50:43 INFO  : System reset is completed.
+15:50:46 INFO  : 'after 3000' command is executed.
+15:50:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+15:50:49 INFO  : FPGA configured successfully with bitstream "D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/bitstream/design_1_wrapper.bit"
+15:50:49 INFO  : Context for 'APU' is selected.
+15:50:49 INFO  : Hardware design and registers information is loaded from 'D:/Xilinx/finalproject_2/workspace2/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:50:49 INFO  : 'configparams force-mem-access 1' command is executed.
+15:50:49 INFO  : Context for 'APU' is selected.
+15:50:49 INFO  : Sourcing of 'D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/psinit/ps7_init.tcl' is done.
+15:50:49 INFO  : 'ps7_init' command is executed.
+15:50:49 INFO  : 'ps7_post_config' command is executed.
+15:50:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:49 INFO  : The application 'D:/Xilinx/finalproject_2/workspace2/finalproject/Debug/finalproject.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:50:49 INFO  : 'configparams force-mem-access 0' command is executed.
+15:50:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Xilinx/finalproject_2/workspace2/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Xilinx/finalproject_2/workspace2/finalproject/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Xilinx/finalproject_2/workspace2/finalproject/Debug/finalproject.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:50:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:49 INFO  : 'con' command is executed.
+15:50:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:50:49 INFO  : Disconnected from the channel tcfchan#1.

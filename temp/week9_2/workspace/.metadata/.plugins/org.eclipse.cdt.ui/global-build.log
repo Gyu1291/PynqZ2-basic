@@ -1,0 +1,28 @@
+Nothing to build in platform 'top'
+
+14:54:40 **** Incremental Build of configuration Debug for project week9_2 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Xilinx/week9_2/workspace/top/export/top/sw/top/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:6: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   66 |      sleep(1);
+      |      ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: week9_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Xilinx/week9_2/workspace/top/export/top/sw/top/domain_ps7_cortexa9_0/bsplib/lib -o "week9_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: week9_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size week9_2.elf  |tee "week9_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19376	   1144	  22568	  43088	   a850	week9_2.elf
+'Finished building: week9_2.elf.size'
+' '

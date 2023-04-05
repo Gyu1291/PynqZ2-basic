@@ -1,0 +1,399 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jun  2 14:32:52 2022
+# Process ID: 27108
+# Current directory: D:/Xilinx/week13/week13.runs/synth_1
+# Command line: vivado.exe -log HDMI_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_TOP.tcl
+# Log file: D:/Xilinx/week13/week13.runs/synth_1/HDMI_TOP.vds
+# Journal file: D:/Xilinx/week13/week13.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source HDMI_TOP.tcl -notrace
+Command: synth_design -top HDMI_TOP -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32072
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1063.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'HDMI_TOP' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/HDMI_TOP.v:4]
+INFO: [Synth 8-6157] synthesizing module 'display_clocks' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/display_clocks.v:5]
+	Parameter MULT_MASTER bound to: 37.125000 - type: double 
+	Parameter DIV_MASTER bound to: 5 - type: integer 
+	Parameter DIV_5X bound to: 2.000000 - type: double 
+	Parameter DIV_1X bound to: 10 - type: integer 
+	Parameter IN_PERIOD bound to: 10.000000 - type: double 
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:40114]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 37.125000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (1#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:40114]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'display_clocks' (3#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/display_clocks.v:5]
+INFO: [Synth 8-6157] synthesizing module 'display_timings' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/display_timings.v:5]
+	Parameter H_RES bound to: 1280 - type: integer 
+	Parameter V_RES bound to: 720 - type: integer 
+	Parameter H_FP bound to: 110 - type: integer 
+	Parameter H_SYNC bound to: 40 - type: integer 
+	Parameter H_BP bound to: 220 - type: integer 
+	Parameter V_FP bound to: 5 - type: integer 
+	Parameter V_SYNC bound to: 5 - type: integer 
+	Parameter V_BP bound to: 20 - type: integer 
+	Parameter H_POL bound to: 1 - type: integer 
+	Parameter V_POL bound to: 1 - type: integer 
+	Parameter H_STA bound to: 32'sb11111111111111111111111010001110 
+	Parameter HS_STA bound to: 32'sb11111111111111111111111011111100 
+	Parameter HS_END bound to: 32'sb11111111111111111111111100100100 
+	Parameter HA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter HA_END bound to: 32'sb00000000000000000000010011111111 
+	Parameter V_STA bound to: 32'sb11111111111111111111111111100010 
+	Parameter VS_STA bound to: 32'sb11111111111111111111111111100111 
+	Parameter VS_END bound to: 32'sb11111111111111111111111111101100 
+	Parameter VA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter VA_END bound to: 32'sb00000000000000000000001011001111 
+INFO: [Synth 8-6155] done synthesizing module 'display_timings' (4#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/display_timings.v:5]
+INFO: [Synth 8-6157] synthesizing module 'gfx' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/gfx_inst.v:4]
+INFO: [Synth 8-6157] synthesizing module 'test_card_simple' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/test_card_simple.v:5]
+	Parameter H_RES bound to: 1280 - type: integer 
+	Parameter HW bound to: 160 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'test_card_simple' (5#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/test_card_simple.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sprite_compositor' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/sprite_compositor.v:5]
+	Parameter palette_colors bound to: 96'b000000000000000000000000111111110000000000000000111111111111111111111111001000010010000111111111 
+	Parameter sprite_data bound to: 1024'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001000100010000000000000000000000000000000000000001000100010001000100010001000100010001000000000000000000000001000100010010001000010001000100010010001000010000000000000000000100010010001000100010000100010010001000100010000000000000000000010001001000100011001100010001001000100011001100000000000000010001000100100010001100110001000100100010001100110001000000000001000100010001001000100001000100010001001000100001000100000000000100010001000100010001000100010001000100010001000100010000000000010001000100010001000100010001000100010001000100010001000000000001000100010001000100010001000100010001000100010001000100000000000100010001000100010001000100010001000100010001000100010000000000010001000000010001000100000000000100010001000000010001000000000001000000000000000100010000000000010001000000000000000100000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'sprite_compositor' (6#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/sprite_compositor.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sprite_compositor_2' [D:/Xilinx/week13/week13.srcs/sources_1/new/sprite_compositor_2.v:5]
+	Parameter palette_colors bound to: 96'b000000000000000000000000111111110000000000000000111111111111111111111111001000010010000111111111 
+	Parameter sprite_data bound to: 1024'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010001000100010000000000000000000000000000000000000001000100010001000100010001000100010001000000000000000000000001000100010010001000010001000100010010001000010000000000000000000100010010001000100010000100010010001000100010000000000000000000010001001000100011001100010001001000100011001100000000000000010001000100100010001100110001000100100010001100110001000000000001000100010001001000100001000100010001001000100001000100000000000100010001000100010001000100010001000100010001000100010000000000010001000100010001000100010001000100010001000100010001000000000001000100010001000100010001000100010001000100010001000100000000000100010001000100010001000100010001000100010001000100010000000000010001000000010001000100000000000100010001000000010001000000000001000000000000000100010000000000010001000000000000000100000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'sprite_compositor_2' (7#1) [D:/Xilinx/week13/week13.srcs/sources_1/new/sprite_compositor_2.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'gfx' (8#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/gfx_inst.v:4]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_generator' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/dvi_generator.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tmds_encoder_HDMI' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:6]
+INFO: [Synth 8-251] 	x 9'bxxxxxxxxx x, x, A1 [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:69]
+INFO: [Synth 8-251] 	x 9'bxxxxxxxxx x, x, A0 [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:74]
+INFO: [Synth 8-251] 	x 9'bxxxxxxxxx x, x, B1 [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:81]
+INFO: [Synth 8-251] 	x 9'bxxxxxxxxx x, x, B0 [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_encoder_HDMI' (9#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/tmds_encoder_dvi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'async_reset' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/async_reset.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'async_reset' (10#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/async_reset.v:6]
+INFO: [Synth 8-6157] synthesizing module 'serializer_10to1' [C:/Users/soongyu/Downloads/13주차 실험 파일/source/serializer_10to1.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:50391]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (11#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:50391]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:50391]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (11#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:50391]
+INFO: [Synth 8-6155] done synthesizing module 'serializer_10to1' (12#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/serializer_10to1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_generator' (13#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/dvi_generator.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:46328]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (14#1) [D:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:46328]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_TOP' (15#1) [C:/Users/soongyu/Downloads/13주차 실험 파일/source/HDMI_TOP.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1063.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1063.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1063.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1063.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/soongyu/Downloads/13주차 실험 파일/xdc.xdc]
+Finished Parsing XDC File [C:/Users/soongyu/Downloads/13주차 실험 파일/xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/soongyu/Downloads/13주차 실험 파일/xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1159.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1159.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1159.945 ; gain = 96.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1159.945 ; gain = 96.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1159.945 ; gain = 96.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1159.945 ; gain = 96.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   18 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 4     
+	   3 Input    8 Bit       Adders := 3     
+	   8 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	  10 Input    5 Bit       Adders := 3     
+	  12 Input    5 Bit       Adders := 3     
+	   4 Input    5 Bit       Adders := 6     
+	   8 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   5 Input   10 Bit        Muxes := 6     
+	   2 Input   10 Bit        Muxes := 9     
+	   4 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 6     
+	   2 Input    5 Bit        Muxes := 12    
+	  16 Input    2 Bit        Muxes := 16    
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 25    
+	  16 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1175.766 ; gain = 112.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1175.766 ; gain = 112.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1243.969 ; gain = 180.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |CARRY4      |   101|
+|3     |LUT1        |    59|
+|4     |LUT2        |   460|
+|5     |LUT3        |    27|
+|6     |LUT4        |   151|
+|7     |LUT5        |    52|
+|8     |LUT6        |   111|
+|9     |MMCME2_BASE |     1|
+|10    |MUXF7       |     2|
+|11    |OSERDESE2   |     8|
+|13    |FDPE        |     3|
+|14    |FDRE        |   101|
+|15    |FDSE        |    32|
+|16    |IBUF        |     5|
+|17    |OBUF        |     4|
+|18    |OBUFDS      |     4|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1254.137 ; gain = 94.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1254.137 ; gain = 190.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1254.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1254.137 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1254.137 ; gain = 190.910
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Xilinx/week13/week13.runs/synth_1/HDMI_TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file HDMI_TOP_utilization_synth.rpt -pb HDMI_TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  2 14:33:27 2022...

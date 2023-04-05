@@ -1,0 +1,46 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[5]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[0]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[5]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[0]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[5]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[6]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[7]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch2/bias_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch1/bias_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[9]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch0/bias_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[7]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[6]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[6]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[0]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[7]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[9]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[9]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch1/bias_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch1/bias_reg[1]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch2/bias_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch2/bias_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch0/bias_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch0/bias_reg[3]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch0/bias_reg[2]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch2/bias_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                          dvi_out/encode_ch1/bias_reg[4]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch2/o_tmds_reg[8]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch0/o_tmds_reg[8]/D|
+|              sys_clk_pin |               clk_1x_pre |                                                                        dvi_out/encode_ch1/o_tmds_reg[8]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
